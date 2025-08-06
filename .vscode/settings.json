@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "files.exclude": {
+      ".env.local": true,
+      "**/.next": true,
+      "**/node_modules": true
+    },
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "tailwindCSS.includeLanguages": {"typescriptreact": "html"}
+}
