@@ -9,7 +9,7 @@ import ReactFlow, {
   Background,
   MarkerType,
   Position
-} from 'react-flow-renderer'
+} from 'reactflow'
 import { supabaseServer } from '../../lib/supabaseServer'
 
 type Row = {
