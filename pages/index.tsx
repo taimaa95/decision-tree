@@ -1,11 +1,16 @@
 // pages/index.tsx
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import type { GetServerSideProps } from 'next'
 
-export default function Home() {
-  const router = useRouter()
-  useEffect(() => {
-    router.replace('/login')
-  }, [router])
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const hasSession = Boolean(req.cookies.session)
+  return {
+    redirect: {
+      destination: hasSession ? '/admin/tree' : '/login',
+      permanent: false,
+    },
+  }
+}
+
+export default function Index() {
   return null
 }
